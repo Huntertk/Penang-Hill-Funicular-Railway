@@ -14,7 +14,7 @@ const bookingPlanSchema = new mongoose.Schema({
         type:[String]
     },
     pricing: {
-        malaysian:{
+        fastLane:{
             adult:{
                 type: Number
             },
@@ -25,7 +25,7 @@ const bookingPlanSchema = new mongoose.Schema({
                 type: Number
             },
         },
-        nonMalaysian:{
+        normalLane:{
             adult:{
                 type: Number
             },

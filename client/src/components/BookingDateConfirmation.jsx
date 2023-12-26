@@ -12,6 +12,7 @@ import PaxModal from './PaxModal';
 import axios from 'axios'
 import moment from 'moment';
 import PreferenceTour from './PreferenceTour';
+import LoadingSpinner from './LoadingSpinner';
 
 
 function isPastDate(date) {
@@ -106,6 +107,7 @@ const BookingDateConfirmation = () => {
         const [selectedDate, setSelectedDate] = useState("")
         const [calenderOpen, setCalenderOpen] = useState(false)
         const [blockedDates, setBlockedDates] = useState([])
+        const [isLoading, setIsLoading] = useState(false)
         const disabledDates = blockedDates?.map((dates) => new Date(dates.blockDates))
        
 
@@ -115,9 +117,11 @@ const BookingDateConfirmation = () => {
 
           const getBlockDates = async () => {
             try {
+                setIsLoading(true)
                 const {data} = await axios.get('/api/v1/booktype-one-dates-manage/block-dates')
                 setBlockedDates(data.blockDates)
-              } catch (error) {
+                setIsLoading(false)
+            } catch (error) {
                   console.log(error);
               }
           }
@@ -134,6 +138,11 @@ const BookingDateConfirmation = () => {
         const defaultMonth = new Date(Date.now());
 
         const navigate = useNavigate()
+
+        if(isLoading){
+
+            return <LoadingSpinner />
+        }
   return (
     <section className='bookingDateConfirmationMainContainer'>
         <div className="bookingDateWrapper">

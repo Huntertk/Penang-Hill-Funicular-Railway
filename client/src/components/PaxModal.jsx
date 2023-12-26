@@ -66,6 +66,7 @@ const PaxModal = ({selectedDate}) => {
         totalAmount,
         bookingDate,
         type,
+        pref,
         bookingTitle,
     } = useSelector((store) => store.booking)
 
@@ -90,6 +91,7 @@ const PaxModal = ({selectedDate}) => {
             }}>Cancel</button>
         </div>
         <p className='bookingType'>{bookingTitle}</p>
+        {pref && <h1>{pref}</h1>}
         <h1>Select number of tickets</h1>
         <div className="paxSelector">
                 <Pax  

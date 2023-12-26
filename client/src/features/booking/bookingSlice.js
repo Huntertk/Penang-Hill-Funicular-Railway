@@ -59,33 +59,33 @@ const bookingSlice = createSlice({
         },
         adultTotalAmount: (state) => {
             if(state.type === 'bookTypeOne'){
-                if(state.pref === "Malaysian Citizens") {
-                    state.adultTotal = state.adultCount *  state.pricing.malaysian.adult
+                if(state.pref === "Fast Lane Tickets") {
+                    state.adultTotal = state.adultCount *  state.pricing.fastLane.adult
                     return
                 } else {
-                    state.adultTotal = state.adultCount *  state.pricing.nonMalaysian.adult
+                    state.adultTotal = state.adultCount *  state.pricing.normalLane.adult
                 }
 
             } 
         },
         childTotalAmount: (state) => {
             if(state.type === 'bookTypeOne'){
-                if(state.pref === "Malaysian Citizens") {
-                    state.childTotal = state.childCount *  state.pricing.malaysian.child
+                if(state.pref === "Fast Lane Tickets") {
+                    state.childTotal = state.childCount *  state.pricing.fastLane.child
                     return
                 } else {
-                    state.childTotal = state.childCount *  state.pricing.nonMalaysian.child
+                    state.childTotal = state.childCount *  state.pricing.normalLane.child
                 }
 
             }
         },
         seniorTotalAmount: (state) => {
             if(state.type === 'bookTypeOne'){
-                if(state.pref === "Malaysian Citizens") {
-                    state.seniorTotal = state.seniorCount *  state.pricing.malaysian.senior
+                if(state.pref === "Fast Lane Tickets") {
+                    state.seniorTotal = state.seniorCount *  state.pricing.fastLane.senior
                     return
                 } else {
-                    state.seniorTotal = state.seniorCount *  state.pricing.nonMalaysian.senior
+                    state.seniorTotal = state.seniorCount *  state.pricing.normalLane.senior
                 }
 
             }

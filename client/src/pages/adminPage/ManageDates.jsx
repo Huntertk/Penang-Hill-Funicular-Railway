@@ -7,7 +7,7 @@ const ManageDates = () => {
     <section className='manageDates'>
       <h1>Manages Dates</h1>
       <div className="btnContainer">
-        <Link to="/admin/manage-dates/booktype-one">Desaru Waterpark Tickets</Link>
+        <Link to="/admin/manage-dates/booktype-one">Penang Hill Funicular Railway Ticket</Link>
       </div>
     </section>
   )

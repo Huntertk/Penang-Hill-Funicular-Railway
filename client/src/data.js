@@ -18,15 +18,15 @@ export const cardData = [
         desc:"Take advantage of Penang Hill's well-known funicular train ride to make your vacation Instagramable. Featuring a century-old virgin rainforest, Penang Hill is a collection of hills standing taller than 700 meters above sea level.",
         type:"bookTypeOne",
         pricing: {
-            malaysian:{
-                adult:85,
-                child:67,
-                senior:67,
+            fastLane:{
+                adult:80,
+                child:40,
+                senior:80,
             },
-            nonMalaysian:{
-                adult:135,
-                child:115,
-                senior:115,
+            normalLane:{
+                adult:30,
+                child:15,
+                senior:30,
             }
         },
 
@@ -38,21 +38,21 @@ export const preferenceData = [
     
     {
         id: uuidv4(),
-        title: "Malaysian Citizens",
-        price: 85,
+        title: "Fast Lane Tickets",
+        price: 80,
         details:[
-            "Valid only for Malaysian Citizens"
+            "Skip queues with a fast lane upgrade."
+        ]
+    },  
+    {
+        id: uuidv4(),
+        title: "Normal Lane Ticket",
+        price: 30,
+        details:[
+            "Standard Admission ticket"
         ]
     },
 
-    {
-        id: uuidv4(),
-        title: "Non Malaysian Citizens",
-        price: 115,
-        details:[
-            "Valid only for Non Malaysian Citizens"
-        ]
-    },  
 ]
 
 
