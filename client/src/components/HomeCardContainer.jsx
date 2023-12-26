@@ -32,7 +32,7 @@ const HomeCardContainer = () => {
   return (
     <section className='HomeCardMainContainer'>
         {cardData.map((data) => {
-            return <HomeCard key={data.id} data={data} />
+            return <HomeCard key={data._id} data={data} />
         })}
     </section>
   )
