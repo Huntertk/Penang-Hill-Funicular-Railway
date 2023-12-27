@@ -45,12 +45,6 @@ const bookingSlice = createSlice({
         childCountDecrease : (state, action) => {
             state.childCount = state.childCount - 1
         },
-        infantCountIncrease : (state, action) => {
-            state.infantCount = state.infantCount + 1
-        },
-        infantCountDecrease : (state, action) => {
-            state.infantCount = state.infantCount - 1
-        },
         seniorCountIncrease : (state, action) => {
             state.seniorCount = state.seniorCount + 1
         },
@@ -180,9 +174,6 @@ export const {
     settingBookingResponse,
     initialRender,
     setPreference,
-    generalCountDecrease,
-    generalCountIncrease,
-    generalTotalAmount
 } = bookingSlice.actions
 
 export default bookingSlice.reducer
